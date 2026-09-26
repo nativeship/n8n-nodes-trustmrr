@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "fixtures": [
+    {
+      "operationId": "getStartup",
+      "method": "GET",
+      "path": "/startups/{slug}",
+      "serverId": "documentServer1HttpsTrustmrrComApiV1",
+      "authentication": [
+        {
+          "schemes": [
+            "TrustMRRBearer"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "slug",
+          "inputName": "slug",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {
+        "fields": [
+          {
+            "name": "data",
+            "type": "object"
+          }
+        ],
+        "simplifiedFields": [
+          "data"
+        ]
+      },
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid or missing request parameters."
+        },
+        {
+          "status": "401",
+          "title": "The API key is missing or invalid."
+        },
+        {
+          "status": "403",
+          "title": "API access is disabled under the Acceptable Use Policy."
+        },
+        {
+          "status": "404",
+          "title": "The requested resource does not exist."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Check the rate-limit headers before retrying."
+        },
+        {
+          "status": "500",
+          "title": "An unexpected server error occurred."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getStartup",
+        "method": "GET",
+        "path": "/startups/{slug}",
+        "serverId": "documentServer1HttpsTrustmrrComApiV1",
+        "request": {
+          "method": "GET",
+          "url": "=/startups/{{$parameter[\"slug\"]}}",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "TrustMRRBearer"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {
+          "fields": [
+            {
+              "name": "data",
+              "type": "object"
+            }
+          ],
+          "simplifiedFields": [
+            "data"
+          ]
+        },
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid or missing request parameters."
+          },
+          {
+            "status": "401",
+            "title": "The API key is missing or invalid."
+          },
+          {
+            "status": "403",
+            "title": "API access is disabled under the Acceptable Use Policy."
+          },
+          {
+            "status": "404",
+            "title": "The requested resource does not exist."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Check the rate-limit headers before retrying."
+          },
+          {
+            "status": "500",
+            "title": "An unexpected server error occurred."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "listStartups",
+      "method": "GET",
+      "path": "/startups",
+      "serverId": "documentServer1HttpsTrustmrrComApiV1",
+      "authentication": [
+        {
+          "schemes": [
+            "TrustMRRBearer"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "page",
+          "inputName": "page",
+          "sample": 1,
+          "default": 1,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "limit",
+          "inputName": "limit",
+          "sample": 10,
+          "default": 10,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "sort",
+          "inputName": "sort",
+          "sample": "revenue-desc",
+          "enum": [
+            "revenue-desc",
+            "revenue-asc",
+            "price-desc",
+            "price-asc",
+            "multiple-asc",
+            "multiple-desc",
+            "growth-desc",
+            "growth-asc",
+            "listed-desc",
+            "listed-asc",
+            "best-deal"
+          ],
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "onSale",
+          "inputName": "onSale",
+          "sample": true,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "category",
+          "inputName": "category",
+          "sample": "ai",
+          "enum": [
+            "ai",
+            "saas",
+            "developer-tools",
+            "fintech",
+            "marketing",
+            "ecommerce",
+            "productivity",
+            "design-tools",
+            "no-code",
+            "analytics",
+            "crypto-web3",
+            "education",
+            "health-fitness",
+            "social-media",
+            "content-creation",
+            "sales",
+            "customer-support",
+            "recruiting",
+            "real-estate",
+            "travel",
+            "legal",
+            "security",
+            "iot-hardware",
+            "green-tech",
+            "entertainment",
+            "games",
+            "community",
+            "news-magazines",
+            "utilities",
+            "marketplace",
+            "mobile-apps"
+          ],
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "xHandle",
+          "inputName": "xHandle",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "teamSize",
+          "inputName": "teamSize",
+          "sample": "1",
+          "enum": [
+            "1",
+            "2-5",
+            "6-10",
+            "11-25",
+            "26-50",
+            "51+"
+          ],
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "fundingStatus",
+          "inputName": "fundingStatus",
+          "sample": "bootstrapped",
+          "enum": [
+            "bootstrapped",
+            "vc-funded"
+          ],
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "minRevenue",
+          "inputName": "minRevenue",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "maxRevenue",
+          "inputName": "maxRevenue",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "minMrr",
+          "inputName": "minMrr",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "maxMrr",
+          "inputName": "maxMrr",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "minGrowth",
+          "inputName": "minGrowth",
+          "sample": 2.5,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "maxGrowth",
+          "inputName": "maxGrowth",
+          "sample": 2.5,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "minPrice",
+          "inputName": "minPrice",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "maxPrice",
+          "inputName": "maxPrice",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {
+        "fields": [
+          {
+            "name": "data",
+            "type": "array"
+          },
+          {
+            "name": "meta",
+            "type": "object"
+          }
+        ],
+        "simplifiedFields": [
+          "data",
+          "meta"
+        ]
+      },
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid or missing request parameters."
+        },
+        {
+          "status": "401",
+          "title": "The API key is missing or invalid."
+        },
+        {
+          "status": "403",
+          "title": "API access is disabled under the Acceptable Use Policy."
+        },
+        {
+          "status": "404",
+          "title": "The requested resource does not exist."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Check the rate-limit headers before retrying."
+        },
+        {
+          "status": "500",
+          "title": "An unexpected server error occurred."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "listStartups",
+        "method": "GET",
+        "path": "/startups",
+        "serverId": "documentServer1HttpsTrustmrrComApiV1",
+        "request": {
+          "method": "GET",
+          "url": "=/startups",
+          "query": [
+            {
+              "name": "page",
+              "source": "additionalFields"
+            },
+            {
+              "name": "limit",
+              "source": "additionalFields"
+            },
+            {
+              "name": "sort",
+              "source": "additionalFields"
+            },
+            {
+              "name": "onSale",
+              "source": "additionalFields"
+            },
+            {
+              "name": "category",
+              "source": "additionalFields"
+            },
+            {
+              "name": "xHandle",
+              "source": "additionalFields"
+            },
+            {
+              "name": "teamSize",
+              "source": "additionalFields"
+            },
+            {
+              "name": "fundingStatus",
+              "source": "additionalFields"
+            },
+            {
+              "name": "minRevenue",
+              "source": "additionalFields"
+            },
+            {
+              "name": "maxRevenue",
+              "source": "additionalFields"
+            },
+            {
+              "name": "minMrr",
+              "source": "additionalFields"
+            },
+            {
+              "name": "maxMrr",
+              "source": "additionalFields"
+            },
+            {
+              "name": "minGrowth",
+              "source": "additionalFields"
+            },
+            {
+              "name": "maxGrowth",
+              "source": "additionalFields"
+            },
+            {
+              "name": "minPrice",
+              "source": "additionalFields"
+            },
+            {
+              "name": "maxPrice",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "TrustMRRBearer"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {
+          "fields": [
+            {
+              "name": "data",
+              "type": "array"
+            },
+            {
+              "name": "meta",
+              "type": "object"
+            }
+          ],
+          "simplifiedFields": [
+            "data",
+            "meta"
+          ]
+        },
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid or missing request parameters."
+          },
+          {
+            "status": "401",
+            "title": "The API key is missing or invalid."
+          },
+          {
+            "status": "403",
+            "title": "API access is disabled under the Acceptable Use Policy."
+          },
+          {
+            "status": "404",
+            "title": "The requested resource does not exist."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Check the rate-limit headers before retrying."
+          },
+          {
+            "status": "500",
+            "title": "An unexpected server error occurred."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    }
+  ],
+  "triggerFixtures": []
+}
