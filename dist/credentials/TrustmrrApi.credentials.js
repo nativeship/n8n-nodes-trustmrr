@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TrustmrrApiApi = void 0;
-class TrustmrrApiApi {
+exports.TrustmrrApi = void 0;
+class TrustmrrApi {
     constructor() {
-        this.name = "trustmrrApiApi";
+        this.name = "trustmrrApi";
         this.displayName = "TrustMRR API";
         this.documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr";
         this.icon = {
-            light: "file:../nodes/TrustmrrApi/trustmrrApi.svg",
-            dark: "file:../nodes/TrustmrrApi/trustmrrApi.dark.svg"
+            light: "file:../nodes/Trustmrr/trustmrr.svg",
+            dark: "file:../nodes/Trustmrr/trustmrr.dark.svg"
         };
         this.properties = [
             {
@@ -38,5 +38,5 @@ class TrustmrrApiApi {
         };
     }
 }
-exports.TrustmrrApiApi = TrustmrrApiApi;
-//# sourceMappingURL=TrustmrrApiApi.credentials.js.map
+exports.TrustmrrApi = TrustmrrApi;
+//# sourceMappingURL=TrustmrrApi.credentials.js.map

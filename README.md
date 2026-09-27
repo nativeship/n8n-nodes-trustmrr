@@ -1,4 +1,4 @@
-# TrustMRR API n8n community node
+# TrustMRR n8n community node
 
 Access verified startup revenue, MRR, growth metrics, and acquisition listings from TrustMRR
 
@@ -13,19 +13,19 @@ Configure the generated bearer token credential in n8n before using the node.
 - `GET /startups/{slug}` - Get Startup
   - Retry Contract: none
   - Pagination Contract: none
-- `GET /startups` - Get Startup
+- `GET /startups` - Get Many Startups
   - Retry Contract: none
   - Pagination Contract: none
 
 ## Usage
 
 1. Install this community-node package in n8n.
-2. Add the **TrustMRR API** node to a workflow.
+2. Add the **TrustMRR** node to a workflow.
 3. Select a resource and operation, configure its parameters, and execute the workflow.
 
 ## Example workflow
 
-Connect **Manual Trigger** -> **TrustMRR API** -> a destination node, select an operation, then run the workflow and inspect the returned items.
+Connect **Manual Trigger** -> **TrustMRR** -> a destination node, select an operation, then run the workflow and inspect the returned items.
 
 ## Development
 
@@ -36,4 +36,4 @@ npm run lint
 npm run dev
 ```
 
-`npm run dev` starts a local n8n development instance. Find the integration by its **TrustMRR API** display name.
+`npm run dev` starts a local n8n development instance. Find the integration by its **TrustMRR** display name.

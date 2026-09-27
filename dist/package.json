@@ -24,11 +24,11 @@
     "license": "MIT",
     "n8n": {
         "credentials": [
-            "dist/credentials/TrustmrrApiApi.credentials.js"
+            "dist/credentials/TrustmrrApi.credentials.js"
         ],
         "n8nNodesApiVersion": 1,
         "nodes": [
-            "dist/nodes/TrustmrrApi/TrustmrrApi.node.js"
+            "dist/nodes/Trustmrr/Trustmrr.node.js"
         ],
         "strict": true
     },

@@ -1,13 +1,13 @@
 import { type IAuthenticateGeneric, type Icon, type ICredentialTestRequest, type ICredentialType, type INodeProperties } from "n8n-workflow";
 
 // Generated with ts-morph
-export class TrustmrrApiApi implements ICredentialType {
-  name = "trustmrrApiApi";
+export class TrustmrrApi implements ICredentialType {
+  name = "trustmrrApi";
   displayName = "TrustMRR API";
   documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr";
   icon: Icon = {
-        light: "file:../nodes/TrustmrrApi/trustmrrApi.svg",
-        dark: "file:../nodes/TrustmrrApi/trustmrrApi.dark.svg"
+        light: "file:../nodes/Trustmrr/trustmrr.svg",
+        dark: "file:../nodes/Trustmrr/trustmrr.dark.svg"
     };
   properties: INodeProperties[] = [
         {

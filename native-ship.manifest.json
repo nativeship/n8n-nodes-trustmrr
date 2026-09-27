@@ -2,15 +2,15 @@
   "schemaVersion": 2,
   "style": "declarative",
   "names": {
-    "typeName": "TrustmrrApi",
-    "nodeName": "trustmrrApi",
-    "descriptionName": "trustmrrApi",
+    "typeName": "Trustmrr",
+    "nodeName": "trustmrr",
+    "descriptionName": "trustmrr",
     "hasTriggers": false,
     "nodeFiles": [
-      "dist/nodes/TrustmrrApi/TrustmrrApi.node.js"
+      "dist/nodes/Trustmrr/Trustmrr.node.js"
     ],
     "credentialFiles": [
-      "dist/credentials/TrustmrrApiApi.credentials.js"
+      "dist/credentials/TrustmrrApi.credentials.js"
     ]
   },
   "target": {
@@ -486,7 +486,7 @@
   ],
   "presentationProfile": {
     "version": 1,
-    "title": "TrustMRR API",
+    "title": "TrustMRR",
     "description": "Access verified startup revenue, MRR, growth metrics, and acquisition listings from TrustMRR",
     "documentationUrl": "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr",
     "artwork": {
@@ -518,7 +518,7 @@
           "method": "GET",
           "path": "/startups"
         },
-        "displayName": "Get Startup",
+        "displayName": "Get Many Startups",
         "description": "Retrieves a paginated list of startups with verified revenue, growth, and listing filters",
         "hidden": false,
         "resource": "startups"

@@ -1,13 +1,13 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from "n8n-workflow";
 
 // Generated with ts-morph
-export class TrustmrrApi implements INodeType {
+export class Trustmrr implements INodeType {
   description: INodeTypeDescription = {
-        displayName: "TrustMRR API",
-        name: "trustmrrApi",
+        displayName: "TrustMRR",
+        name: "trustmrr",
         icon: {
-            light: "file:trustmrrApi.svg",
-            dark: "file:trustmrrApi.dark.svg"
+            light: "file:trustmrr.svg",
+            dark: "file:trustmrr.dark.svg"
         },
         group: [],
         version: [
@@ -24,7 +24,7 @@ export class TrustmrrApi implements INodeType {
             }
         ],
         defaults: {
-            name: "TrustMRR API"
+            name: "TrustMRR"
         },
         usableAsTool: true,
         inputs: [
@@ -35,7 +35,7 @@ export class TrustmrrApi implements INodeType {
         ],
         credentials: [
             {
-                name: "trustmrrApiApi",
+                name: "trustmrrApi",
                 required: true
             }
         ],
@@ -87,9 +87,9 @@ export class TrustmrrApi implements INodeType {
                         }
                     },
                     {
-                        name: "Get (2)",
+                        name: "Get Many",
                         value: "listStartups",
-                        action: "Get startup",
+                        action: "Get many startups",
                         description: "Retrieves a paginated list of startups with verified revenue, growth, and listing filters",
                         routing: {
                             request: {

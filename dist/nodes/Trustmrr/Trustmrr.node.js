@@ -1,15 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TrustmrrApi = void 0;
+exports.Trustmrr = void 0;
 const n8n_workflow_1 = require("n8n-workflow");
-class TrustmrrApi {
+class Trustmrr {
     constructor() {
         this.description = {
-            displayName: "TrustMRR API",
-            name: "trustmrrApi",
+            displayName: "TrustMRR",
+            name: "trustmrr",
             icon: {
-                light: "file:trustmrrApi.svg",
-                dark: "file:trustmrrApi.dark.svg"
+                light: "file:trustmrr.svg",
+                dark: "file:trustmrr.dark.svg"
             },
             group: [],
             version: [
@@ -26,7 +26,7 @@ class TrustmrrApi {
                 }
             ],
             defaults: {
-                name: "TrustMRR API"
+                name: "TrustMRR"
             },
             usableAsTool: true,
             inputs: [
@@ -37,7 +37,7 @@ class TrustmrrApi {
             ],
             credentials: [
                 {
-                    name: "trustmrrApiApi",
+                    name: "trustmrrApi",
                     required: true
                 }
             ],
@@ -89,9 +89,9 @@ class TrustmrrApi {
                             }
                         },
                         {
-                            name: "Get (2)",
+                            name: "Get Many",
                             value: "listStartups",
-                            action: "Get startup",
+                            action: "Get many startups",
                             description: "Retrieves a paginated list of startups with verified revenue, growth, and listing filters",
                             routing: {
                                 request: {
@@ -565,5 +565,5 @@ class TrustmrrApi {
         };
     }
 }
-exports.TrustmrrApi = TrustmrrApi;
-//# sourceMappingURL=TrustmrrApi.node.js.map
+exports.Trustmrr = Trustmrr;
+//# sourceMappingURL=Trustmrr.node.js.map
