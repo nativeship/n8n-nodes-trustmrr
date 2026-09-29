@@ -5,7 +5,7 @@ class TrustmrrApi {
     constructor() {
         this.name = "trustmrrApi";
         this.displayName = "TrustMRR API";
-        this.documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr";
+        this.documentationUrl = "https://trustmrr.com/docs/api";
         this.icon = {
             light: "file:../nodes/Trustmrr/trustmrr.svg",
             dark: "file:../nodes/Trustmrr/trustmrr.dark.svg"

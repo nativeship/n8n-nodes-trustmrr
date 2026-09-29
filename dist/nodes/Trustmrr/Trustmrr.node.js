@@ -15,8 +15,9 @@ class Trustmrr {
             version: [
                 1
             ],
-            subtitle: "={{$parameter[\"operation\"] + \": \" + $parameter[\"resource\"]}}",
+            subtitle: "={{((JSON.parse(\"{\\\"startups\\\":{\\\"getStartup\\\":\\\"getStartup: startup\\\",\\\"listStartups\\\":\\\"getManyStartups: startup\\\"}}\"))[$parameter[\"resource\"]] || {})[$parameter[\"operation\"]] || ($parameter[\"operation\"] + \": \" + $parameter[\"resource\"])}}",
             description: "Access verified startup revenue, MRR, growth metrics, and acquisition listings from TrustMRR",
+            documentationUrl: "https://trustmrr.com/docs/api",
             hints: [
                 {
                     message: "Operation \"listStartups\" looks paginated, but no explicit safe Pagination Contract is available. The generated operation remains single-page until an explicit bounded Pagination Contract is provided.",
@@ -92,7 +93,7 @@ class Trustmrr {
                             name: "Get Many",
                             value: "listStartups",
                             action: "Get many startups",
-                            description: "Retrieves a paginated list of startups with verified revenue, growth, and listing filters",
+                            description: "Returns a paginated list of startups with verifieretrieves a paginated list of startups with verified revenue, growth, and listing filtersd revenue",
                             routing: {
                                 request: {
                                     method: "GET",

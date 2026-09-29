@@ -4,7 +4,7 @@ import { type IAuthenticateGeneric, type Icon, type ICredentialTestRequest, type
 export class TrustmrrApi implements ICredentialType {
   name = "trustmrrApi";
   displayName = "TrustMRR API";
-  documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr";
+  documentationUrl = "https://trustmrr.com/docs/api";
   icon: Icon = {
         light: "file:../nodes/Trustmrr/trustmrr.svg",
         dark: "file:../nodes/Trustmrr/trustmrr.dark.svg"

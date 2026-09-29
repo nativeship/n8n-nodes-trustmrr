@@ -1,6 +1,6 @@
 {
     "author": {
-        "email": "work.bhshekhaliya@gmail.com",
+        "email": "hello@nativeship.io",
         "name": "Administrator"
     },
     "description": "Access verified startup revenue, MRR, growth metrics, and acquisition listings from TrustMRR",
@@ -17,9 +17,18 @@
     "files": [
         "dist"
     ],
-    "homepage": "https://nativeship.io/nodes/@nativeship/n8n-nodes-trustmrr",
+    "homepage": "https://trustmrr.com/docs/api",
     "keywords": [
-        "n8n-community-node-package"
+        "n8n-community-node-package",
+        "saasmarketplace",
+        "verifiedrevenue",
+        "stripeverification",
+        "startupleaderboard",
+        "startupdatabase",
+        "indiehackers",
+        "buildinpublic",
+        "saasmetrics",
+        "trustmrr"
     ],
     "license": "MIT",
     "n8n": {

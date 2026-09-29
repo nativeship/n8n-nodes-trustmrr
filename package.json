@@ -1,5 +1,6 @@
 {
   "author": {
+    "email": "hello@nativeship.io",
     "name": "nativeship",
     "url": "https://github.com/nativeship"
   },
@@ -19,14 +20,18 @@
   ],
   "homepage": "https://github.com/nativeship/n8n-nodes-trustmrr",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "saasmarketplace",
+    "verifiedrevenue",
+    "stripeverification",
+    "startupleaderboard",
+    "startupdatabase",
+    "indiehackers",
+    "buildinpublic",
+    "saasmetrics",
+    "trustmrr"
   ],
   "license": "MIT",
-  "maintainers": [
-    {
-      "name": "nativeship"
-    }
-  ],
   "n8n": {
     "credentials": [
       "dist/credentials/TrustmrrApi.credentials.js"
@@ -39,7 +44,7 @@
   },
   "name": "@nativeship/n8n-nodes-trustmrr",
   "nativeShip": {
-    "artifactSha256": "43d5307556314f939b9ad7f90180079cfff95c643a14783430b5003d8ef9961b"
+    "artifactSha256": "7a517a2096fdda2b76122196083f7b35cf3f89dde27177dd39f1422a657558fe"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
@@ -57,5 +62,5 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
