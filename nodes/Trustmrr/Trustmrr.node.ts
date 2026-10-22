@@ -13,7 +13,7 @@ export class Trustmrr implements INodeType {
         version: [
             1
         ],
-        subtitle: "={{((JSON.parse(\"{\\\"startups\\\":{\\\"getStartup\\\":\\\"getStartup: startup\\\",\\\"listStartups\\\":\\\"getManyStartups: startup\\\"}}\"))[$parameter[\"resource\"]] || {})[$parameter[\"operation\"]] || ($parameter[\"operation\"] + \": \" + $parameter[\"resource\"])}}",
+        subtitle: "={{((JSON.parse(\"\\u007b\\\"startups\\\":\\u007b\\\"getStartup\\\":\\\"getStartup: startup\\\",\\\"listStartups\\\":\\\"getManyStartups: startup\\\"\\u007d\\u007d\"))[$parameter[\"resource\"]] || {})[$parameter[\"operation\"]] || ($parameter[\"operation\"] + \": \" + $parameter[\"resource\"])}}",
         description: "Access verified startup revenue, MRR, growth metrics, and acquisition listings from TrustMRR",
         documentationUrl: "https://trustmrr.com/docs/api",
         hints: [
@@ -79,7 +79,7 @@ export class Trustmrr implements INodeType {
                         name: "Get",
                         value: "getStartup",
                         action: "Get startup",
-                        description: "Retrieves full profile details, tech stack, co-founders, and insights for a specific startup by slug",
+                        description: "Retrieves full profile details, tech stack, co-founders, and insights for a specific startup by slug,",
                         routing: {
                             request: {
                                 method: "GET",

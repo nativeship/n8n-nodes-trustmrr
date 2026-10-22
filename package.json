@@ -44,7 +44,7 @@
   },
   "name": "@nativeship/n8n-nodes-trustmrr",
   "nativeShip": {
-    "artifactSha256": "7a517a2096fdda2b76122196083f7b35cf3f89dde27177dd39f1422a657558fe"
+    "artifactSha256": "2654a7602af8ffb10159ca6bf0d5b63f71e12b8525a1b9e531859993236a4c24"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
@@ -62,5 +62,5 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix"
   },
-  "version": "1.0.3"
+  "version": "1.0.4"
 }

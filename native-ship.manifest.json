@@ -508,7 +508,7 @@
           "path": "/startups/{slug}"
         },
         "displayName": "Get Startup",
-        "description": "Retrieves full profile details, tech stack, co-founders, and insights for a specific startup by slug",
+        "description": "Retrieves full profile details, tech stack, co-founders, and insights for a specific startup by slug,",
         "hidden": false,
         "resource": "startups"
       },
